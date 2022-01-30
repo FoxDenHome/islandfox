@@ -21,22 +21,6 @@ network:
       link: eno1
       mtu: 9000
   bridges:
-    br1:
-      mtu: 9000
-      addresses:
-      - 10.1.12.1/16
-      routes:
-      - to: default
-        via: 10.1.0.1
-      nameservers:
-        addresses:
-        - 10.1.0.53
-        search:
-        - foxden.network
-      interfaces: [eno1]
-      parameters:
-        stp: false
-        forward-delay: 0
     br2:
       mtu: 9000
       interfaces: [eno1.2]
@@ -66,6 +50,22 @@ network:
       interfaces: [eno1.5]
       dhcp4: false
       link-local: []
+      parameters:
+        stp: false
+        forward-delay: 0
+    br6:
+      mtu: 9000
+      addresses:
+      - 10.6.10.2/16
+      routes:
+      - to: default
+        via: 10.6.0.1
+      nameservers:
+        addresses:
+        - 10.6.0.53
+        search:
+        - foxden.network
+      interfaces: [eno1]
       parameters:
         stp: false
         forward-delay: 0
