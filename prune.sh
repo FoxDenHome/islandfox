@@ -5,5 +5,5 @@ runprune() {
     /opt/backup/prune.sh
 }
 
-runbackup 'b2:islandfox-backups:/'
-runbackup 'sftp:islandfox@icefox.doridian.net:/mnt/zhdd/islandfox/restic'
+runprune 'b2:islandfox-backups:/'
+runprune 'sftp:islandfox@icefox.doridian.net:/mnt/zhdd/islandfox/restic'
