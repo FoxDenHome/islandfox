@@ -1,8 +1,8 @@
 #!/bin/sh
 
-runbackup() {
+runprune() {
     export REPO="$1"
-    /opt/backup/run.sh /var/lib/docker/*/volumes /boot/efi /
+    /opt/backup/prune.sh
 }
 
 runbackup 'b2:islandfox-backups:/'
