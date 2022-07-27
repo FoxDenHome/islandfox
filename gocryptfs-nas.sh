@@ -2,7 +2,6 @@
 
 set -ex
 
-gocryptfs --allow_other --passfile /mnt/keydisk/gocryptfs-icefox-nas /mnt/nas/zhdd /mnt/nas/zhdd_dec
-gocryptfs --allow_other --passfile /mnt/keydisk/gocryptfs-icefox-nas /mnt/nas/zssd /mnt/nas/zssd_dec
-
-
+#gocryptfs --allow_other --passfile /mnt/keydisk/gocryptfs-icefox-nas /mnt/nas/zhdd /mnt/nas/zhdd_dec
+#gocryptfs --allow_other --passfile /mnt/keydisk/gocryptfs-icefox-nas /mnt/nas/zssd /mnt/nas/zssd_dec
+LC_GOCRYPTFS_PASSWD="$(cat /mnt/keydisk/gocryptfs-icefox-nas)" ssh root@icefox.doridian.net
