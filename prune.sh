@@ -5,6 +5,4 @@ runx() {
     /opt/backup/prune.sh
 }
 
-runx 'b2:islandfox-backups:/'
-REST_SERVER_PASSWORD="$(cat /mnt/keydisk/rest-server-password | tr -d '\r\n\t ')"
-runx "rest:https://islandfox:$REST_SERVER_PASSWORD@icefox.doridian.net:8000/islandfox/main"
+/opt/islandfox/restic.sh /opt/backup/prune.sh
